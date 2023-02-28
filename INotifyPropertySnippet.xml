@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippet Format="1.0.0" xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+	<Header>
+		<Title>InotifyPropertyChangedSnippet</Title>
+		<Author>Vlad Verlov</Author>
+		<Shortcut>inotprop</Shortcut>
+		<Description>описание</Description>
+		<SnippetTypes>
+			<SnippetType>Expansion</SnippetType>
+		</SnippetTypes>
+	</Header>
+	<Snippet>
+		<Declarations>
+			<Literal>
+				<ID>name</ID>
+				<Default>value</Default>
+			</Literal>
+		</Declarations>
+		<Code Language="CSharp">
+			<![CDATA[private MajorIndex? dowJones;
+
+        public MajorIndex? DowJones
+        {
+            get
+            {
+                return dowJones;
+            }
+            set
+            {
+                dowJones = value;
+                OnPropertyChanged(nameof(DowJones));
+            }
+        }]]>
+		</Code>
+	</Snippet>
+</CodeSnippet>
